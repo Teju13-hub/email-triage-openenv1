@@ -1,0 +1,18 @@
+[project]
+name = "email-triage-v1"
+version = "1.0.0"
+description = "Email AI agent for OpenEnv"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core>=0.2.0",
+    "flask>=3.0",
+    "pydantic>=2.0",
+    "openai>=1.0",
+]
+
+[project.scripts]
+server = "server.app:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.backends.legacy:build"

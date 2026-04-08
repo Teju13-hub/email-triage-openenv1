@@ -1,0 +1,25 @@
+name: email-env
+version: "1.0"
+description: Email classification and reply agent
+
+tasks:
+  - name: easy
+    description: Label at least one email as urgent
+    grader: true
+    endpoint: /grade/easy
+
+  - name: medium
+    description: Correctly label spam and normal emails
+    grader: true
+    endpoint: /grade/medium
+
+  - name: hard
+    description: Full classification accuracy plus reply quality
+    grader: true
+    endpoint: /grade/hard
+
+endpoints:
+  reset: /reset
+  step: /step
+  state: /state
+  grade: /grade
